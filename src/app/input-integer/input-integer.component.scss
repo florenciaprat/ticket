@@ -1,0 +1,19 @@
+input{
+    max-width: 30px;
+    height: 30px;
+    border-color: #D8F1F3;
+    border-radius: 30px;
+
+}
+div.input-group{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.input-group .btn{
+    background-color:#A4D6DB;
+    border-color:#A4D6DB;
+    margin-left: 2px;
+    margin-right: 2px;
+    
+}
+

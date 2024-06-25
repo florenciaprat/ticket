@@ -1,0 +1,59 @@
+h1 {
+    color:rgb(4, 4, 128);
+    font-size: 30px;
+    padding: 20px;
+    padding-left: 0px;
+}
+
+.oferta{
+    border: 2px solid green;
+    background-color: rgb(139, 238, 139);
+}
+td{
+    vertical-align: middle;
+    
+}
+.img-thumbnail {
+    width: 300px;
+}
+.btn-primary{
+    background-color: #B13B71;
+    border-color: #B13B71;
+}
+.custom-alert {
+    padding: 5px;
+    background-color: rgba(91, 172, 235, 0.1);
+    border: 2px solid #479097; 
+    color: #479097; 
+    border-radius: 5px; 
+    margin-bottom: 10px;
+    display: none; 
+}
+  .custom-alert.show {
+    display: block; 
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .close-btn {
+    position: relative;
+    background: none; 
+    border: none; 
+    font-size: 12px; 
+    cursor: pointer; 
+    outline: none; 
+    padding-left: 185px;
+    margin-top:-25px;
+    width: 30%;
+    color: #B13B71;
+  }
+  .close-btn:hover {
+    text-decoration: underline; 
+  }
+  .msj{
+    font-size: 15px;
+   
+  }
+  p{
+    width:70%;
+  }
+ 

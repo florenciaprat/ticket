@@ -1,0 +1,9 @@
+<h3>Mis entradas</h3>
+@for (ticket of  cartList$ |async; track ticket.Nombre){
+<ul>
+    @if ((ticket.Stock >0)&&(ticket.cantidad!=0)){
+        <li>{{ticket.Nombre}}: {{ticket.cantidad}}</li>
+    }
+
+</ul>
+}

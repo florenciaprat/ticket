@@ -1,0 +1,50 @@
+<h1>Tickets - Concierto de Harry Styles</h1>
+@if ("maxLimite"){
+  <div class="msj" [ngClass]="{'show': showMessage, 'custom-alert': true}">
+    <p>{{message}}</p>
+    <button class="close-btn" (click)="hideMessage()">Cerrar</button>
+  </div>
+}
+<table class="table text-center" >
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Stock</th>
+            <th>Vista</th>
+            <th>Cantidad</th>
+            <th>Compra</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (ticket of tickets; track ticket.Nombre) {
+            <tr [ngClass]="{'ultimas': ticket.ultimas}">
+              <td>{{ ticket.Nombre }}</td>
+              <td>{{ ticket.Precio | currency:'$':'symbol':'1.0-0'}}</td>
+              
+              @if (ticket.Stock >0) {
+                <td>{{ ticket.Stock }}</td>
+              } @else {
+                <td><span class="badge text-bg-warning">AGOTADAS</span></td>
+              }
+              <td><img width="100" class="img-thumbnail" [src]="ticket.imagen" [alt]="ticket.Nombre"></td>
+              @if (ticket.Stock >0){
+                <td>
+                  <app-input-integer [(cantidad)]="ticket.cantidad" [max]="ticket.Stock" (maxLimite)="maxLimite($event)"></app-input-integer>
+                </td>
+                <td>
+                  <button class="btn btn-primary" (click)="addToCart(ticket)">Comprar</button>
+                </td>
+              } @else{
+                <td></td>
+                <td></td>
+              }
+            </tr>
+          } @empty {
+            <tr>
+              <td colspan="4">No hay tickets para mostrar.</td>
+            </tr>
+          }
+         
+    </tbody>
+</table>
