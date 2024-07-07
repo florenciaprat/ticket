@@ -3,7 +3,7 @@
       <div class="input-group-prepend">
         <button class="btn btn-primary btn-sm" (click)="downCantidad()">-</button>
       </div>
-      <input type="text" [(ngModel)]="cantidad" (keyup)="onChangeCantidad($event)">
+      <input type="number" [(ngModel)]="cantidad" min="0" required (keyup)="onChangeCantidad($event)">
       <div class="input-group-prepend">
         <button class="btn btn-primary btn-sm" (click)="upCantidad()">+</button>
       </div>
